@@ -1,0 +1,32 @@
+# OS Generated #
+__pycache__
+.vscode
+
+# datasets
+clothing*
+electronic*
+food*
+Amazon_total*
+
+dataset/
+datasets.tar.gz
+
+Transfer/
+transfer.tar.gz
+
+runs
+runs*
+runs/*
+log
+log*
+log/*
+
+# checkpoints
+output/
+outputs/
+pretrained/
+saved_checkpoints/
+
+analysis/
+
+*.pt

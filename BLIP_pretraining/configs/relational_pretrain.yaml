@@ -1,0 +1,38 @@
+dataset_name: Amazon_total
+
+# --------- Relational Dataset Settings ---------
+# CF_data_type: 'relational_pretrain'
+CF_dataset_paths: [
+  './datasets/pretrain/clothing/item_transition_dataset_t-win_0/',
+  './datasets/pretrain/electronic/item_transition_dataset_t-win_0/',
+  './datasets/pretrain/food/item_transition_dataset_t-win_0/',
+]
+checkpoints_and_aliases: [
+  ['./saved_checkpoints/BLIP_finetuned/checkpoint_09.pth', 'Amazon_finetuned_lr_3e-5']
+]
+load_optimizer: False
+
+metadata_path: '/storage_fast/yzhe/Amazon_meta/'
+
+# size of vit model; base or large
+vit: 'base'
+vit_grad_ckpt: False
+vit_ckpt_layer: 0
+
+image_size: 224
+batch_size: 8
+
+queue_size: 57600
+alpha: 0.4
+
+# optimizer
+weight_decay: 0.05
+init_lr: 1e-5
+min_lr: 1e-5
+warmup_lr: 1e-5
+lr_decay_rate: 1.0
+max_epoch: 31
+save_ckpt_interval: 2
+warmup_steps: 3000
+
+fix_half_layers: True
