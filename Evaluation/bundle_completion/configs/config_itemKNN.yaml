@@ -1,0 +1,36 @@
+# evaluation setting for each downstream dataset
+clothing:
+  data_path: "./datasets/evaluation_datasets/bundle_completion/clothing/"
+  metadata_path: "/storage_fast/yzhe/Amazon_meta/"
+  topk: [10, 20, 40, 80]
+  batch_size: 2048
+  test_batch_size: 512
+  # emb_size - if set to null, the embedding size will be the same as the input pretrained embeddings
+  emb_size: null
+
+
+electronic:
+  data_path: "./datasets/evaluation_datasets/bundle_completion/electronic/"
+  metadata_path: "/storage_fast/yzhe/Amazon_meta/"
+  topk: [10, 20, 40, 80]
+  batch_size: 2048
+  test_batch_size: 512
+  emb_size: null
+  
+
+food:
+  data_path: "./datasets/evaluation_datasets/bundle_completion/food/"
+  metadata_path: "/storage_fast/yzhe/Amazon_meta/"
+  topk: [10, 20, 40, 80]
+  batch_size: 2048
+  test_batch_size: 512
+  emb_size: null
+
+
+# POG_dense:
+#   data_path: "./bundle_completion/evaluation_datasets/POG_dense/"
+#   metadata_path: "./bundle_completion/evaluation_datasets/POG_dense/metadata_with_id.json"
+#   topk: [10, 20, 40, 80]
+#   batch_size: 2048
+#   test_batch_size: 512
+#   emb_size: 768

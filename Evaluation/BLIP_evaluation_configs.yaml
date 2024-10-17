@@ -1,0 +1,11 @@
+# list[0] - alias of the evaluated pretraining checkpoint, used for naming the evaluation result
+# list[1] - path of the checkpoint which need to be evluated
+pretrain_alias_and_path: ["CIRP%02d", "./output/Electronic_t0_clean/Electronic_t0_disti_1_temp_0.25_Debugging-Reshow_relational_pretrain_ckpt_Amazon_total_M1_lr_3e-5_Args_lr_1e-05_WD0.05_bs_32_loss/checkpoint_%02d.pth"]
+
+eval_start_ep: 0
+eval_end_ep: 16   # maximum epoch number (not included) to test
+eval_interval: 1
+
+# Feature extraction method, options: text, image, ti_norm_mix
+feature_extraction_types: ["ti_norm_mix"]
+# feature_extraction_types: ["ti_norm_mix_W", "text_W", "image_W"]
