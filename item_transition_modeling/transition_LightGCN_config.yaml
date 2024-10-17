@@ -1,0 +1,63 @@
+clothing:
+  data_path: "./datasets/pretrain/clothing/item_transition_dataset_t-win_0/"
+  batch_size: 2048
+  test_batch_size: 256
+  test_interval: 20
+  topk: [10, 20, 40, 80]
+
+  num_epoches: 400
+  emb_sizes: [64]
+  num_layerss: [2]
+  bidirectional_graph: True
+
+  lrs: [0.0005]
+  l2_regs: [1.0e-6]
+
+  # Data augmentation setting. Do not change this part if you are not sure what you are doing
+  aug_type: "OP"  # select from "OP", "ED" and "MD". - OP: no augmentation, ED: edge dropout, MD: message dropout
+  ed_interval: 1  # number of epoch between two continuous edge dropouts. Only works when aug_type=ED
+  aug_rates: [0]  # strength of the data augmentation
+
+
+electronic:
+  data_path: "./datasets/pretrain/electronic/item_transition_dataset_t-win_0/"
+  batch_size: 2048
+  test_batch_size: 256
+  test_interval: 20
+  topk: [10, 20, 40, 80]
+
+  num_epoches: 400
+  emb_sizes: [64]
+  num_layerss: [2]
+  bidirectional_graph: True
+
+  lrs: [0.0005]
+  l2_regs: [1.0e-6]
+
+  # Data augmentation setting. Do not change this part if you are not sure what you are doing
+  aug_type: "OP"  # select from "OP", "ED" and "MD". - OP: no augmentation, ED: edge dropout, MD: message dropout
+  ed_interval: 1  # number of epoch between two continuous edge dropouts. Only works when aug_type=ED
+  aug_rates: [0]  # strength of the data augmentation
+
+
+food:
+  data_path: "./datasets/pretrain/food/item_transition_dataset_t-win_0/"
+  batch_size: 2048
+  test_batch_size: 256
+  test_interval: 20
+  topk: [10, 20, 40, 80]
+
+  num_epoches: 500
+  emb_sizes: [64]
+  num_layerss: [3]
+  bidirectional_graph: True
+
+  lrs: [0.0005]
+  l2_regs: [1.0e-6]
+
+  # Data augmentation setting. Do not change this part if you are not sure what you are doing
+  aug_type: "OP"  # select from "OP", "ED" and "MD". - OP: no augmentation, ED: edge dropout, MD: message dropout
+  ed_interval: 1  # number of epoch between two continuous edge dropouts. Only works when aug_type=ED
+  aug_rates: [0]  # strength of the data augmentation
+
+
